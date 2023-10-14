@@ -1,0 +1,518 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F8F4E9;
+  height: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+  transition: 1s;
+}
+
+a:hover {
+  color: rgb(40, 45, 95);
+  text-decoration: none;
+}
+
+/* main-visual */
+#main-visual {
+  padding: 20px;
+  margin: 0;
+}
+
+#main-visual img {
+  width: 100%;
+}
+
+#wrapper {
+  height: 100%;
+  min-width: 800px;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  line-height: 0;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  flex: 0;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background: #FFF;
+  line-height: 0;
+  font-size: 0;
+  flex-grow: 1;
+}
+
+#main {
+  background: #FFF;
+  width: 100%;
+  padding: 40px;
+  margin: 0;
+  position: relative;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+#main h1 {
+  border-top: 3px solid #75492b;
+  border-bottom: 3px solid #75492b;
+  margin-bottom: 30px;
+  padding: 6px 20px 2px 20px;
+  color: #FFF;
+  background: #8e4403;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+#main h2 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  border-left: 4px solid #8e4403;
+  padding: 10px 15px;
+  margin: 30px 0;
+}
+
+#main h2 span {
+  font-weight: 500;
+}
+
+#main h3 {
+  display: block;
+  background-color: #DDD;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+  padding: 8px 15px;
+}
+
+#main h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+#main p.lgs {
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+#main p.lg {
+  font-size: 1.2rem;
+  margin: 40px 0;
+}
+
+#main ul {
+  margin: 20px 20px 40px 20px;
+}
+
+#main ul li {
+  list-style: none;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+#header {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  width: 100%;
+  height: 80px;
+  background-color: #8e4403;
+  line-height: 0;
+  font-size: 0;
+}
+
+#footer {
+  padding: 0;
+  margin: 0;
+  color: #FFF;
+  background: #8e4403;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  line-height: 0;
+  font-size: 0;
+}
+
+/* サイドバーナビここから */
+#sidebar {
+  padding: 0 0 100px 0;
+  margin: 0;
+  background: #f7b73a;
+  vertical-align: top;
+  width: 20rem;
+  line-height: 1.5;
+}
+
+#global-nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+#global-nav > ul > li {
+  position: relative;
+  border-bottom: 1px solid #FFF;
+}
+
+#global-nav a {
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  padding: 12px 20px;
+  transition: background-color 0.3s linear;
+  background: #dfa103;
+}
+
+#global-nav a:hover {
+  font-weight: bold;
+  background: #f7b73a;
+}
+
+/* sub-menu icon */
+#global-nav .sub-menu > a {
+  position: relative;
+}
+
+#global-nav .sub-menu > a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 18px;
+  margin: auto;
+  vertical-align: middle;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transition: all 0.2s ease-out;
+  transform: rotate(135deg);
+}
+
+#global-nav .sub-menu > a.is-active:after {
+  transform: rotate(-45deg);
+}
+
+/* sub-menu */
+#global-nav .sub-menu-nav {
+  display: none;
+  margin-top: -1px;
+  background: #FFF;
+}
+
+#global-nav .sub-menu-nav li {
+  border-top: 1px solid #FFF;
+}
+
+#global-nav .sub-menu-nav li a {
+  font-size: 0.9rem;
+  background: #f7b73a;
+}
+
+#global-nav .sub-menu-nav li a:hover {
+  background: #f7b73a;
+}
+
+/*サブメニュー開*/
+#global-nav.prg .sub-menu.prg .sub-menu-nav {
+  display: block;
+}
+
+#global-nav.jusho .sub-menu.jusho .sub-menu-nav {
+  display: block;
+}
+
+#global-nav.koto .sub-menu.koto .sub-menu-nav {
+  display: block;
+}
+
+/* サイドバーナビここまで */
+#program {
+  padding: 0 20px;
+}
+
+#program ul.section {
+  margin: 30px 0 40px 0;
+}
+
+#program ul.section li {
+  list-style: none;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+#program ul.section li.date {
+  font-size: 1.2rem;
+  background-color: #dfa103;
+  padding: 10px 15px;
+}
+
+#program ul.section li.site {
+  font-size: 1.1rem;
+  border-bottom: 2px solid #8e4403;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+#program ul.section li.time {
+  font-size: 1.1rem;
+  padding: 10px 15px;
+}
+
+#program .table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 30px;
+  padding: 0;
+  line-height: 1.6rem !important;
+}
+
+#program .table dl {
+  display: table-row;
+}
+
+#program .table dl dt,
+#program .table dl dd {
+  display: table-cell;
+}
+
+#program .table dl dt {
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  text-align: right;
+  padding: 0 20px 10px 0;
+  width: 7rem;
+}
+
+#program .table dl dt.wide {
+  width: 10rem;
+}
+
+#program .table dl dd {
+  border-bottom: 1px solid #CCC;
+  padding: 0 0 10px 20px;
+}
+
+#program .poster {
+  border-top: 1px solid #CCC;
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+}
+
+#program .poster div {
+  display: block !important;
+  width: 100%;
+  border-bottom: 1px solid #CCC;
+  padding: 0 0 10px 20px;
+  margin-bottom: 30px;
+}
+
+#program .table ul {
+  display: table;
+  width: 100%;
+  padding: 0 !important;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+#program .table ul li {
+  display: table-cell;
+  padding-right: 3rem;
+}
+
+#program .table ul li:nth-child(1) {
+  font-weight: 600;
+  padding-right: 1rem;
+  width: 6rem;
+  text-align: center;
+}
+
+#program .table ul li span {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+#program .table ul li a {
+  font-size: 1.05rem;
+}
+
+#program .table ul li p {
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+#program .table ul li span {
+  font-weight: 600;
+  display: block;
+}
+
+#program .table dl.double dt {
+  padding: 0;
+  border-right: 0;
+}
+
+#program .table dl.double dt em:nth-child(1) {
+  display: block;
+  font-style: normal;
+  padding: 20px 20px 20px 0;
+  border-bottom: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  margin-bottom: 20px;
+}
+
+#program .table dl.double dt em:nth-child(2) {
+  display: block;
+  font-style: normal;
+  padding: 20px 20px 20px 0;
+  border-bottom: 0;
+  border-right: 1px solid #CCC;
+  margin-bottom: 0;
+}
+
+#program .table dl.double dd {
+  padding: 0;
+}
+
+#program .table dl.double dd em:nth-child(1) {
+  display: block;
+  font-style: normal;
+  padding: 0 0 20px 20px;
+  border-bottom: 1px solid #CCC;
+  text-align: center;
+  width: 7rem;
+  margin-bottom: 20px;
+}
+
+#program .table dl.double dd em:nth-child(2) {
+  display: block;
+  font-style: normal;
+  padding: 20px 0 0 20px;
+  border-bottom: 0;
+  text-align: center;
+  width: 7rem;
+  margin-bottom: 0;
+}
+
+#program .table dl.double dd ul li:nth-child(1) {
+  padding-right: 1rem;
+}
+
+iframe[src$=".pdf"] {
+  width: 100%;
+  height: 65vh;
+}
+
+.download {
+  text-align: center;
+  margin: 4em 0;
+}
+
+.download a {
+  display: inline-block;
+  background-color: #8e4403;
+  color: #FFF;
+  font-weight: 600;
+  padding: 1em;
+  font-size: 1.3em;
+  line-height: 1.6;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.download a:hover {
+  background-color: rgb(216, 141, 51);
+}
+
+.download a img {
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.banner li {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  position: relative;
+  padding: 1rem 1rem 4rem 1rem;
+  margin: 1rem 0 1rem -1px !important;
+}
+
+.banner li a {
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.banner li img {
+  display: block;
+  margin: auto;
+  width: 130px;
+  max-width: 100%;
+}
+
+.banner li img.sm {
+  width: 100px;
+}
+
+.banner li p {
+  padding: 0 1rem;
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+
+.col2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}/*# sourceMappingURL=sytle.css.map */
