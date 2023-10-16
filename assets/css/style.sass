@@ -18,9 +18,9 @@ html
   height: 100%
   margin: 0
   padding: 0
-  font-size: 15px
+  font-size: 93.75%
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif
-  line-height: 1.5
+  line-height: 1.5em
 
 body 
   margin: 0
@@ -72,13 +72,12 @@ a:hover
   flex-grow: 1
 
 #main 
-  background: #FFF
+  position: relative
   width:100%
   padding: 40px
-  margin: 0
-  position: relative
-  line-height: 1
   font-size: 1rem
+  line-height: 1
+  background: #FFF
 
 #main h1 
   border-top: 3px solid $main-col-deep
@@ -120,11 +119,9 @@ a:hover
   font-size: 1.1rem
   margin: 20px 0
 
-
 #main p.lg 
   font-size: 1.2rem
   margin: 40px 0
-
 
 #main ul 
   margin: 20px 20px 40px 20px
@@ -134,29 +131,14 @@ a:hover
   font-size: 1.1rem
   margin-bottom: 15px
 
-
 #header 
-  padding: 0
-  margin: 0
-  color: #333
   width: 100%
-  height: 80px
   background-color: $main-col
-  line-height: 0
-  font-size: 0
-
 
 #footer 
-  padding: 0
-  margin: 0
-  color: #FFF
-  background: $main-col
-  text-align: center
   width: 100%
-  height: 100px
-  line-height: 0
-  font-size: 0
-
+  text-align: center
+  background: $main-col
 
 /* サイドバーナビここから */
 #sidebar 
@@ -175,7 +157,6 @@ a:hover
   position: relative
   border-bottom: 1px solid #FFF
 
-
 #global-nav a 
   font-size: 1rem
   color: #000
@@ -189,7 +170,6 @@ a:hover
 #global-nav a:hover 
   font-weight: bold
   background: $main-col-light
-
 
 /* sub-menu icon */
 #global-nav .sub-menu > a 
@@ -212,11 +192,9 @@ a:hover
   -webkit-transform: rotate(135deg)
   transform: rotate(135deg)
 
-
 #global-nav .sub-menu > a.is-active:after 
   -webkit-transform: rotate(-45deg)
   transform: rotate(-45deg)
-
 
 /* sub-menu */
 #global-nav .sub-menu-nav 
@@ -234,7 +212,6 @@ a:hover
 #global-nav .sub-menu-nav li a:hover 
   background: $main-col-light
 
-
 /*サブメニュー開*/
 #global-nav.prg .sub-menu.prg .sub-menu-nav 
   display: block
@@ -249,10 +226,8 @@ a:hover
 #program 
   padding: 0 20px
 
-
 #program ul.section 
   margin: 30px 0 40px 0
-
 
 #program ul.section li 
   list-style: none
@@ -297,16 +272,12 @@ a:hover
   padding: 0 20px 10px 0
   width:7rem
 
-
 #program .table dl dt.wide 
   width:10rem
-
 
 #program .table dl dd 
   border-bottom: 1px solid #CCC
   padding: 0 0 10px 20px
-
-
 
 #program .poster 
   border-top: 1px solid #CCC
@@ -314,14 +285,12 @@ a:hover
   margin: 0
   border-spacing: 0
 
-
 #program .poster div 
   display: block !important
   width: 100%
   border-bottom: 1px solid #CCC
   padding: 0 0 10px 20px
   margin-bottom: 30px
-
 
 #program .table ul 
   display: table
@@ -341,7 +310,6 @@ a:hover
   padding-right: 1rem
   width:6rem
   text-align: center
-
 
 #program .table ul li span 
   font-weight: 600
@@ -415,7 +383,6 @@ iframe[src$=".pdf"]
 // bottom: 40px
 // margin: auto
 
-
 .download 
   text-align: center
   margin: 4em 0
@@ -480,7 +447,46 @@ iframe[src$=".pdf"]
   left: 0
   right: 0
 
-
 .col2 
   display: grid
   grid-template-columns: 50% 50%
+
+
+#program
+  .section
+    .time
+      span
+        padding: 3rem
+
+#main
+  > .container
+    padding: 20px
+    .top-pege
+      padding: 50px
+      font-size: clamp(2rem, -1rem + 6vw, 3.25rem)
+      line-height: clamp(.75em, -1em + 6vw, 1.5em)
+      font-weight: 700
+      text-align: center
+      letter-spacing: .05em
+      color: #fff
+      background-color: orange
+      border: unset
+      span
+        display: block
+        margin-top: 25px
+        font-size: clamp(1.5rem, -0.5rem + 4vw, 2.25rem)
+        line-height: clamp(.5em, -0.5em + 4vw, 1em)
+        font-weight: 700
+        font-feature-settings: "palt"
+    p
+      font-size: clamp(0.9rem, 0.4rem + 1vw, 1.15rem)
+      font-weight: 700
+      line-height: 2.5em
+      text-align: center
+      font-feature-settings: "palt"
+      &.sub
+        font-size: clamp(1.3rem, 0.7rem + 1.2vw, 1.6rem)
+        font-weight: 600
+        line-height: 1.8em
+        margin-bottom: 30px
+
