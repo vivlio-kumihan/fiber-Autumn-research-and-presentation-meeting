@@ -542,18 +542,4 @@ iframe[src$=".pdf"] {
   font-weight: 600;
   line-height: 1.8em;
   margin-bottom: 30px;
-}
-
-.sp-session-title {
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-.sp-session-title .main-title {
-  width: 225px;
-}
-.sp-session-title .sub-title {
-  font-size: 15px;
-  line-height: 1.15;
-  width: 50%;
 }/*# sourceMappingURL=style.css.map */

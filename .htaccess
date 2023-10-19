@@ -1,16 +1,9 @@
-<Files ~ "^.(htpasswd|htaccess)$">
-<!-- BASIC認証を有効にする -->
-deny from all
-<!-- BASIC認証を無効にする -->
-<!-- 
-Satisfy any
-order allow,deny
-allow from all
--->
+<Files ~ "^\.ht">
+    Order allow,deny
+    Deny from all
+    Satisfy All
 </Files>
-
-AuthUserfile /prodigi.jp/~fiber2023/.htpasswd
-AuthGroupfile /dev/null
-AuthName "fiber2023"
 AuthType Basic
-require valid-user
+AuthUserFile /var/www/vhosts/prodigi.jp/web_users/fiber2023/.htpasswd
+AuthName "Please enter your ID and password"
+Require valid-user
