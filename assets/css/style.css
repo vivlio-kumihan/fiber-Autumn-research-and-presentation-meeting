@@ -482,6 +482,12 @@ iframe[src$=".pdf"] {
   width: 130px;
   max-width: 100%;
 }
+.banner li img.size-up-logo {
+  width: 160px;
+}
+.banner li img.size-down-logo {
+  width: 110px;
+}
 
 .banner li img.sm {
   width: 100px;
@@ -489,6 +495,17 @@ iframe[src$=".pdf"] {
 
 .banner li p {
   padding: 0 1rem;
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+
+.corp-name {
   margin: 0;
   font-weight: 600;
   font-size: 0.7rem;
