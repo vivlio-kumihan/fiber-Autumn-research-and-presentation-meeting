@@ -485,8 +485,29 @@ iframe[src$=".pdf"] {
 .banner li img.size-up-logo {
   width: 160px;
 }
-.banner li img.size-down-logo {
+.banner li img.seiren {
+  width: 105px;
+}
+.banner li img.toray {
+  width: 105px;
+}
+.banner li img.avantium {
+  width: 90px;
+}
+.banner li img.nisshin {
   width: 110px;
+}
+.banner li img.unitika {
+  width: 95px;
+}
+.banner li img.toyobo {
+  width: 95px;
+}
+.banner li img.kbseiren {
+  width: 150px;
+}
+.banner li img.kuraray {
+  width: 115px;
 }
 
 .banner li img.sm {
