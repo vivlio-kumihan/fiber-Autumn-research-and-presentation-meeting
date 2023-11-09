@@ -576,7 +576,7 @@ iframe[src$=".pdf"] {
 }
 
 .request-lect {
-  margin: 30px auto 15px;
+  margin: 30px auto 0;
   padding: 0;
   font-size: 1.1rem;
   font-weight: 700;
@@ -589,6 +589,8 @@ iframe[src$=".pdf"] {
 }
 
 #program .table.one-next-table {
-  margin-bottom: 20px;
   border-spacing: 0 15px;
+}
+#program .table.one-next-table.marginbottom {
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
