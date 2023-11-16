@@ -509,6 +509,21 @@ iframe[src$=".pdf"] {
 .banner li img.kuraray {
   width: 115px;
 }
+.banner li img.acroedge {
+  width: 130px;
+}
+.banner li img.ohki {
+  width: 95px;
+}
+.banner li img.exlan {
+  width: 105px;
+}
+.banner li img.gunze {
+  width: 100px;
+}
+.banner li img.aoyama {
+  width: 145px;
+}
 
 .banner li img.sm {
   width: 100px;
@@ -576,6 +591,7 @@ iframe[src$=".pdf"] {
   font-feature-settings: "palt";
 }
 #main > .container p.sub {
+  padding-top: 30px;
   font-size: clamp(1.3rem, 0.7rem + 1.2vw, 1.6rem);
   font-weight: 600;
   line-height: 1.8em;
